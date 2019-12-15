@@ -52,3 +52,13 @@ print(list)
 # sort(reverse) 默认为false
 list.sort(reverse=True) # 倒序排序
 print(list)
+
+# 列表的拷贝的区别：
+print("列表的拷贝的区别:")
+list = [1,2,3,4,5,6,7,8,9]
+list1 = list     # 引用方法1
+list2 = list[:]  # 引用方法2
+list.reverse()
+print('list:',list)
+print('list1:',list1)  # = 这种方法引用，原列表修改之后，新列表也随之变化    地址传递
+print('list2:',list2)  # [:]这种方法引用，原列表修改之后，新列表不变         值传递
